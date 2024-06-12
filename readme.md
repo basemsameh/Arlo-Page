@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Arlo Website is a portfolio site showcasing the work and services of Albert Walkers, a professional web developer with over 20 years of experience. The site features sections about Albert, the services he offers, his portfolio, latest news, and contact information. It is designed with a modern, responsive layout using HTML, CSS, JavaScript, and the Bootstrap framework.
+The Arlo Website is a portfolio site showcasing many things. The site features sections about, the services, portfolio, latest news, and contact information. It is designed with a modern, responsive layout using HTML, CSS, JavaScript, and the Bootstrap framework.
 
 ## Table of Contents
 
