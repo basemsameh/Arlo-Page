@@ -89,7 +89,16 @@ cursorShape.forEach(e => {
   }
 })
 
-// When scrolled to counter area
+// Hide circle cursor & apper it according to width of screen
+window.onresize = () => {
+  if (window.innerWidth >= 1024) {
+    cursorMove.style.display = 'none';
+  } else {
+    cursorMove.style.display = 'block';
+  }
+}
+
+// Increasing number of counter
 function counter(ele) {
   let goal = ele.getAttribute('data-goal');
   let count = setInterval(() => {
@@ -101,7 +110,7 @@ function counter(ele) {
 }
 
 window.onscroll = () => {
-  // increasing number of counter
+  // When scrolled to counter area
   if (window.scrollY >= document.querySelector('.counter').offsetTop - 300) {
     if (!started) {
       count.forEach((num) => counter(num));
@@ -126,39 +135,27 @@ window.onscroll = () => {
 // Give active to nav link that scrolled to its area
 function check() {
   if (window.scrollY >= 0) {
-    navLinks.forEach(ele => {
-      ele.classList.remove('active');
-    });
+    navLinks.forEach(ele => { ele.classList.remove('active') });
     navLinks[0].classList.add('active');
   }
   if (window.scrollY >= 700) {
-    navLinks.forEach(ele => {
-      ele.classList.remove('active');
-    });
+    navLinks.forEach(ele => { ele.classList.remove('active') });
     navLinks[1].classList.add('active');
   }
   if (window.scrollY >= 1700) {
-    navLinks.forEach(ele => {
-      ele.classList.remove('active');
-    });
+    navLinks.forEach(ele => { ele.classList.remove('active') });
     navLinks[2].classList.add('active');
   }
   if (window.scrollY >= 3100) {
-    navLinks.forEach(ele => {
-      ele.classList.remove('active');
-    });
+    navLinks.forEach(ele => { ele.classList.remove('active') });
     navLinks[3].classList.add('active');
   }
   if (window.scrollY >= 4700) {
-    navLinks.forEach(ele => {
-      ele.classList.remove('active');
-    });
+    navLinks.forEach(ele => { ele.classList.remove('active') });
     navLinks[4].classList.add('active');
   }
   if (window.scrollY >= 5700) {
-    navLinks.forEach(ele => {
-      ele.classList.remove('active');
-    });
+    navLinks.forEach(ele => { ele.classList.remove('active') });
     navLinks[5].classList.add('active');
   }
 }
@@ -166,9 +163,7 @@ function check() {
 // When click on navbar link 
 navLinks.forEach(e => {
   e.onclick = () => {
-    navLinks.forEach(ele => {
-      ele.classList.remove('active');
-    });
+    navLinks.forEach(ele => { ele.classList.remove('active') });
     e.classList.add('active');
   }
 })
